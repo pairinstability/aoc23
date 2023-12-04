@@ -35,3 +35,27 @@ target_link_libraries(
 )
 
 add_test(aocday2 aocday2)
+
+# day 3
+add_executable(aocday3 day3.cpp)
+target_include_directories(aocday3 PUBLIC "${CMAKE_SOURCE_DIR}/include")
+
+target_link_libraries(
+    aocday3
+    day3
+    GTest::GTest
+)
+
+add_test(aocday3 aocday3)
+
+# day 4
+add_executable(aocday4 day4.cpp)
+target_include_directories(aocday4 PUBLIC "${CMAKE_SOURCE_DIR}/include")
+
+target_link_libraries(
+    aocday4
+    day4
+    GTest::GTest
+)
+
+add_test(aocday4 aocday4)

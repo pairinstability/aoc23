@@ -4,14 +4,18 @@
 #include <cstdlib>
 #include <cstring>
 #include <expected>
+#include <filesystem>
 #include <fstream>
 #include <iostream>
 #include <string>
 #include <utils/errors.h>
 #include <vector>
 
-#define GTEST_COUT std::cerr << "[          ] [ INFO ] "
-#define PATH "/home/user/aoc/"
+#define GTEST_COUT std::cerr << "[ INFO     ] "
+
+// assume the test is being run from build/tests, which is not a great assumption but
+// its better than hardcoding the path
+#define USE_PATH(path) (std::filesystem::current_path() / "../.." / path).string()
 
 namespace Util {
 // read text input from a file, line by line, return the vector with lines wrapped

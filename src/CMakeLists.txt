@@ -21,7 +21,13 @@ target_include_directories(day1 PUBLIC ${PROJECT_SOURCE_DIR}/../include)
 add_library(day2 "${PROJECT_SOURCE_DIR}/../include/day2.h" "${PROJECT_SOURCE_DIR}/../src/day2.cpp")
 target_include_directories(day2 PUBLIC ${PROJECT_SOURCE_DIR}/../include)
 
+# day 3
+add_library(day3 "${PROJECT_SOURCE_DIR}/../include/day3.h" "${PROJECT_SOURCE_DIR}/../src/day3.cpp")
+target_include_directories(day3 PUBLIC ${PROJECT_SOURCE_DIR}/../include)
 
+# day 4
+add_library(day4 "${PROJECT_SOURCE_DIR}/../include/day4.h" "${PROJECT_SOURCE_DIR}/../src/day4.cpp")
+target_include_directories(day4 PUBLIC ${PROJECT_SOURCE_DIR}/../include)
 
 
 
@@ -34,5 +40,15 @@ target_link_libraries(
 
 target_link_libraries(
     day2
+    utils
+)
+
+target_link_libraries(
+    day3
+    utils
+)
+
+target_link_libraries(
+    day4
     utils
 )
