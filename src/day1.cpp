@@ -6,11 +6,11 @@
 #include <string>
 #include <utils/util.h>
 
-std::expected<double, Error::solver_error> Day1::SolvePart1(const std::string& input)
+std::expected<double, Error::generic_error> Day1::SolvePart1(const std::string& input)
 {
     auto data = Util::ReadInputFromFile(input);
     if (not data.has_value()) {
-        return std::unexpected { Error::solver_error::no_solution };
+        return std::unexpected { data.error() };
     }
 
     std::vector<int> calibration_values;
@@ -33,11 +33,11 @@ std::expected<double, Error::solver_error> Day1::SolvePart1(const std::string& i
     return sum;
 };
 
-std::expected<double, Error::solver_error> Day1::SolvePart2(const std::string& input)
+std::expected<double, Error::generic_error> Day1::SolvePart2(const std::string& input)
 {
     auto data = Util::ReadInputFromFile(input);
     if (not data.has_value()) {
-        return std::unexpected { Error::solver_error::no_solution };
+        return std::unexpected { data.error() };
     }
 
     std::vector<std::string> string_numbers { "one", "two", "three", "four", "five", "six", "seven", "eight", "nine" };

@@ -1,7 +1,7 @@
 #include <utils/util.h>
 
 namespace Util {
-std::expected<std::vector<std::string>, Error::file_error> ReadInputFromFile(const std::string& filename)
+std::expected<std::vector<std::string>, Error::generic_error> ReadInputFromFile(const std::string& filename)
 {
     std::ifstream file(filename);
     if (file.is_open()) {
@@ -12,7 +12,22 @@ std::expected<std::vector<std::string>, Error::file_error> ReadInputFromFile(con
         }
         return lines;
     } else {
-        return std::unexpected { Error::file_error::bad_file };
+        return std::unexpected { Error::generic_error::bad_file };
     }
 }
+
+std::string ErrorToString(Error::generic_error error)
+{
+    switch (error) {
+    case Error::no_solution:
+        return "no solution exists";
+    case Error::file_doesnt_exist:
+        return "file does not exist";
+    case Error::bad_file:
+        return "badly formatted file";
+    default:
+        return "unknown error";
+    }
+}
+
 }

@@ -17,10 +17,16 @@
 // its better than hardcoding the path
 #define USE_PATH(path) (std::filesystem::current_path() / "../.." / path).string()
 
+// for easily printing the error out
+#define PRINT_ERROR(result) ("Error: " + Util::ErrorToString(result))
+
 namespace Util {
 // read text input from a file, line by line, return the vector with lines wrapped
 // in an expected
-std::expected<std::vector<std::string>, Error::file_error> ReadInputFromFile(const std::string& filename);
+std::expected<std::vector<std::string>, Error::generic_error> ReadInputFromFile(const std::string& filename);
+
+// convert a error to useful text
+std::string ErrorToString(Error::generic_error error);
 
 // print debugging information only if the DEBUG environemnt variable is
 // set

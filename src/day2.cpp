@@ -5,11 +5,11 @@
 #include <sstream>
 #include <utils/util.h>
 
-std::expected<double, Error::solver_error> Day2::SolvePart1(const std::string& input)
+std::expected<double, Error::generic_error> Day2::SolvePart1(const std::string& input)
 {
     auto data = Util::ReadInputFromFile(input);
     if (not data.has_value()) {
-        return std::unexpected { Error::solver_error::no_solution };
+        return std::unexpected { data.error() };
     }
 
     int sum = 0;
@@ -37,17 +37,17 @@ std::expected<double, Error::solver_error> Day2::SolvePart1(const std::string& i
     }
 
     if (sum == 0) {
-        return std::unexpected { Error::solver_error::no_solution };
+        return std::unexpected { Error::generic_error::no_solution };
     } else {
         return sum;
     }
 };
 
-std::expected<double, Error::solver_error> Day2::SolvePart2(const std::string& input)
+std::expected<double, Error::generic_error> Day2::SolvePart2(const std::string& input)
 {
     auto data = Util::ReadInputFromFile(input);
     if (not data.has_value()) {
-        return std::unexpected { Error::solver_error::no_solution };
+        return std::unexpected { data.error() };
     }
 
     int sum = 0;
@@ -80,7 +80,7 @@ std::expected<double, Error::solver_error> Day2::SolvePart2(const std::string& i
     }
 
     if (sum == 0) {
-        return std::unexpected { Error::solver_error::no_solution };
+        return std::unexpected { Error::generic_error::no_solution };
     } else {
         return sum;
     }
