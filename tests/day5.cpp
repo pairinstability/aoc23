@@ -18,7 +18,7 @@ TEST(RunSolutions, RunDay5)
 
     auto sample_sol_b = day5.SolvePart2(USE_PATH("input/day5a_sample.txt"));
 
-    EXPECT_TRUE(sample_sol_b.has_value());
+    EXPECT_TRUE(sample_sol_b.has_value()) << PRINT_ERROR(sample_sol_b.error());
     EXPECT_EQ(sample_sol_b.value(), 46.0);
 
     auto puzzle_sol_b = day5.SolvePart2(USE_PATH("input/day5_puzzle.txt"));

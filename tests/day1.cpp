@@ -8,7 +8,7 @@ TEST(RunSolutions, RunDay1)
     Day1 day1;
     auto sample_sol_a = day1.SolvePart1(USE_PATH("input/day1a_sample.txt"));
 
-    EXPECT_TRUE(sample_sol_a.has_value());
+    EXPECT_TRUE(sample_sol_a.has_value()) << PRINT_ERROR(sample_sol_a.error());
     EXPECT_EQ(sample_sol_a.value(), 142.0);
 
     auto puzzle_sol_a = day1.SolvePart1(USE_PATH("input/day1_puzzle.txt"));
@@ -17,7 +17,7 @@ TEST(RunSolutions, RunDay1)
 
     auto sample_sol_b = day1.SolvePart2(USE_PATH("input/day1b_sample.txt"));
 
-    EXPECT_TRUE(sample_sol_b.has_value());
+    EXPECT_TRUE(sample_sol_b.has_value()) << PRINT_ERROR(sample_sol_b.error());
     EXPECT_EQ(sample_sol_b.value(), 281.0);
 
     auto puzzle_sol_b = day1.SolvePart2(USE_PATH("input/day1_puzzle.txt"));
