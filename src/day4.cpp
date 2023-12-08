@@ -1,12 +1,12 @@
 // implementation of day4 solution
 
 #include <cmath>
-#include <day4.h>
+#include <day.h>
 #include <iostream>
 #include <numeric>
 #include <set>
 #include <sstream>
-#include <utils/util.h>
+#include <util.h>
 
 std::expected<double, Error::generic_error> Day4::SolvePart1(const std::string& input)
 {

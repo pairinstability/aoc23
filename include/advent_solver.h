@@ -1,9 +1,9 @@
-#ifndef AOC_INCLUDE_UTILS_ADVENT_SOLVER_H_
-#define AOC_INCLUDE_UTILS_ADVENT_SOLVER_H_
+#ifndef AOC_ADVENT_SOLVER_H_
+#define AOC_ADVENT_SOLVER_H_
 
 #include <expected>
 #include <string>
-#include <utils/errors.h>
+#include <util.h>
 #include <vector>
 
 // AOC daily solver interface
@@ -17,4 +17,4 @@ public:
     virtual ~AdventSolver() = default;
 };
 
-#endif // AOC_INCLUDE_UTILS_ADVENT_SOLVER_H_
+#endif // AOC_ADVENT_SOLVER_H_

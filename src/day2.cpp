@@ -1,9 +1,9 @@
 // implementation of day2 solution
 
-#include <day2.h>
+#include <day.h>
 #include <iostream>
 #include <sstream>
-#include <utils/util.h>
+#include <util.h>
 
 std::expected<double, Error::generic_error> Day2::SolvePart1(const std::string& input)
 {

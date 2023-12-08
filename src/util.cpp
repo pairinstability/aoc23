@@ -1,4 +1,4 @@
-#include <utils/util.h>
+#include <util.h>
 
 namespace Util {
 std::expected<std::vector<std::string>, Error::generic_error> ReadInputFromFile(const std::string& filename)

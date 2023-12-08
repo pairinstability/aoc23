@@ -3,10 +3,10 @@
 #include <algorithm>
 #include <array>
 #include <cmath>
-#include <day6.h>
+#include <day.h>
 #include <iostream>
 #include <sstream>
-#include <utils/util.h>
+#include <util.h>
 
 
 // find a solution whereby t * (T - t) > D, with unknown t

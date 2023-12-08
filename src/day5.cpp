@@ -3,10 +3,10 @@
 #include <algorithm>
 #include <array>
 #include <cstdint>
-#include <day5.h>
+#include <day.h>
 #include <iostream>
 #include <sstream>
-#include <utils/util.h>
+#include <util.h>
 
 std::expected<double, Error::generic_error> Day5::SolvePart1(const std::string& input)
 {

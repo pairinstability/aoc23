@@ -1,10 +1,10 @@
 // implementation of day3 solution
 
-#include <day3.h>
+#include <day.h>
 #include <iostream>
 #include <regex>
 #include <sstream>
-#include <utils/util.h>
+#include <util.h>
 
 bool Day3::is_adjacent(Number& num, Symbol& sym)
 {

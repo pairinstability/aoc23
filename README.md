@@ -1,9 +1,28 @@
-advent of code 2023
+Advent of code 2023
 ===
 
-arguably overkill using features from C++23 and googletest
+dont know how many i'll do or if i'll do them all. aoc can be really boring when its so much string parsing
 
-solutions in `src`
-text inputs in `input`
-running solutions w text inputs in `tests`
-headers in `include`
+
+Tested on Ubuntu 22.04
+
+requirements:
+- gcc-12
+- Ninja
+- googletest
+
+Building
+---
+
+```sh
+./compile.sh
+```
+
+Running
+---
+
+using googletest
+
+```sh
+./run.sh
+```
